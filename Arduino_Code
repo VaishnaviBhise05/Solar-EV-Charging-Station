@@ -1,11 +1,34 @@
 #include <WiFi.h>
 
+const int voltageSensor = 34;
+const int relayPin = 26;
+
+float voltage = 0.0;
+
 void setup() {
   Serial.begin(115200);
-  Serial.println("Smart EV Charging Station Started");
+
+  pinMode(relayPin, OUTPUT);
+
+  Serial.println("Smart Solar EV Charging Station Started");
 }
 
 void loop() {
-  Serial.println("Monitoring Battery & Voltage...");
+
+  int sensorValue = analogRead(voltageSensor);
+
+  voltage = sensorValue * (3.3 / 4095.0);
+
+  Serial.print("Battery Voltage: ");
+  Serial.println(voltage);
+
+  if (voltage > 2.0) {
+    digitalWrite(relayPin, HIGH);
+    Serial.println("Charging ON");
+  } else {
+    digitalWrite(relayPin, LOW);
+    Serial.println("Charging OFF");
+  }
+
   delay(2000);
 }
