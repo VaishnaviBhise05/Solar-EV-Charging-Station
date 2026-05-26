@@ -1,1 +1,17 @@
+SMART SOLAR EV CHARGING STATION
 
+Objective:
+To develop a smart and sustainable EV charging station powered by solar energy using ESP32 and IoT technology.
+
+Features:
+Real-time monitoring
+Battery voltage tracking
+Mobile app integration
+Firebase cloud monitoring
+Smart charging control
+
+Technologies Used:
+ESP32, Arduino IDE, Firebase, IoT, Embedded Systems
+
+Future Scope:
+AI-based energy optimization and smart scheduling.
