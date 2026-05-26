@@ -1,1 +1,13 @@
+Circuit Components:
+ESP32
+Solar Panel
+Battery
+Voltage Sensor
+Relay Module
+Charging Module
 
+Connections:
+Voltage sensor connected to GPIO34
+Relay connected to GPIO26
+Battery connected to charging module
+Solar panel powers battery system
