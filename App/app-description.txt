@@ -1,1 +1,3 @@
-
+This mobile application allows users to monitor battery voltage,
+charging status, solar energy usage, and EV charging activity
+in real-time using Firebase cloud connectivity.
